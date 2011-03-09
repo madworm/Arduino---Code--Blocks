@@ -30,7 +30,13 @@
 			<Add option="-mmcu=atmega168p" />
 			<Add option="-fno-exceptions -ffunction-sections -fdata-sections" />
 			<Add option="-DF_CPU=16000000UL" />
+			<Add directory="../arduino_core_libs" />
+			<Add directory="../arduino_core_libs/Wire" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="../arduino_core_libs" />
+			<Add directory="../arduino_core_libs/Wire" />
+		</ResourceCompiler>
 		<Linker>
 			<Add option="-Os" />
 			<Add option="-mmcu=atmega168p" />
@@ -38,6 +44,8 @@
 			<Add option="-Wl,--gc-sections" />
 			<Add library="../arduino_core_libs/core.a" />
 			<Add library="/usr/local/avr/avr/lib/libm.a" />
+			<Add directory="../arduino_core_libs" />
+			<Add directory="../arduino_core_libs/Wire" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
@@ -47,18 +55,19 @@
 			<Add after="avr-size $(TARGET_OUTPUT_FILE).hex" />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="HardwareSerial.h" />
-		<Unit filename="Print.h" />
-		<Unit filename="Stream.h" />
-		<Unit filename="WCharacter.h" />
-		<Unit filename="WConstants.h" />
-		<Unit filename="WProgram.h" />
-		<Unit filename="WString.h" />
-		<Unit filename="binary.h" />
+		<Unit filename="../arduino_core_libs/HardwareSerial.h" />
+		<Unit filename="../arduino_core_libs/Print.h" />
+		<Unit filename="../arduino_core_libs/Stream.h" />
+		<Unit filename="../arduino_core_libs/WCharacter.h" />
+		<Unit filename="../arduino_core_libs/WConstants.h" />
+		<Unit filename="../arduino_core_libs/WProgram.h" />
+		<Unit filename="../arduino_core_libs/WString.h" />
+		<Unit filename="../arduino_core_libs/Wire/Wire.h" />
+		<Unit filename="../arduino_core_libs/binary.h" />
+		<Unit filename="../arduino_core_libs/pins_arduino.h" />
+		<Unit filename="../arduino_core_libs/wiring.h" />
+		<Unit filename="../arduino_core_libs/wiring_private.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="pins_arduino.h" />
-		<Unit filename="wiring.h" />
-		<Unit filename="wiring_private.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />

@@ -8,4 +8,4 @@ if [[ -z $1 ]]; then
 	exit
 fi
 
-for file in `$LS $1`; do $AVR_AR rcs core.a "$1/$file"; done
+find $1 -type f -exec $AVR_AR rcs core.a {} \;

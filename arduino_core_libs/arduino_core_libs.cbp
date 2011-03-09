@@ -59,6 +59,12 @@
 		<Unit filename="WProgram.h" />
 		<Unit filename="WString.cpp" />
 		<Unit filename="WString.h" />
+		<Unit filename="Wire/Wire.cpp" />
+		<Unit filename="Wire/Wire.h" />
+		<Unit filename="Wire/utility/twi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Wire/utility/twi.h" />
 		<Unit filename="binary.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pins_arduino.c">
