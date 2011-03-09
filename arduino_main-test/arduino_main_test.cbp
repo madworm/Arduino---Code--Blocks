@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="arduino_main_test" />
+		<Option pch_mode="2" />
+		<Option compiler="avrgcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/arduino_main_test.elf" prefix_auto="1" extension_auto="0" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="avrgcc" />
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/arduino_main_test.elf" prefix_auto="1" extension_auto="0" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="avrgcc" />
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Os" />
+			<Add option="-Wmain" />
+			<Add option="-Wall" />
+			<Add option="-g" />
+			<Add option="-mmcu=atmega168p" />
+			<Add option="-fno-exceptions -ffunction-sections -fdata-sections" />
+			<Add option="-DF_CPU=16000000UL" />
+		</Compiler>
+		<Linker>
+			<Add option="-Os" />
+			<Add option="-mmcu=atmega168p" />
+			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
+			<Add option="-Wl,--gc-sections" />
+			<Add library="../arduino_core_libs/core.a" />
+			<Add library="/usr/local/avr/avr/lib/libm.a" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
+			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
+			<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
+			<Add after="avr-size $(TARGET_OUTPUT_FILE)" />
+			<Add after="avr-size $(TARGET_OUTPUT_FILE).hex" />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="HardwareSerial.h" />
+		<Unit filename="Print.h" />
+		<Unit filename="Stream.h" />
+		<Unit filename="WCharacter.h" />
+		<Unit filename="WConstants.h" />
+		<Unit filename="WProgram.h" />
+		<Unit filename="WString.h" />
+		<Unit filename="binary.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="pins_arduino.h" />
+		<Unit filename="wiring.h" />
+		<Unit filename="wiring_private.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
