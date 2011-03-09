@@ -44,15 +44,19 @@ uint8_t led_pin = 13;
 
 void setup(void)
 {
+    /*
     pinMode(led_pin,OUTPUT);
-    //Serial.begin(9600);
+    Serial.begin(9600);
+    */
 }
 
 void loop(void)
 {
+    /*
     digitalWrite(led_pin,HIGH);
     delay(250);
     digitalWrite(led_pin,LOW);
     delay(250);
-    //Serial.println("test");
+    Serial.println("test");
+    */
 }
