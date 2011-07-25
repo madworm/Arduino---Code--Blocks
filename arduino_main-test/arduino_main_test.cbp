@@ -32,6 +32,9 @@
 			<Add option="-DF_CPU=16000000UL" />
 			<Add directory="../arduino_core_libs" />
 			<Add directory="../arduino_core_libs/Wire" />
+			<Add directory="../arduino_core_libs/EEPROM" />
+			<Add directory="../arduino_core_libs/Ethernet" />
+			<Add directory="../arduino_core_libs/SPI" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="../arduino_core_libs" />
@@ -55,19 +58,8 @@
 			<Add after="avr-size $(TARGET_OUTPUT_FILE).hex" />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="../arduino_core_libs/HardwareSerial.h" />
-		<Unit filename="../arduino_core_libs/Print.h" />
-		<Unit filename="../arduino_core_libs/Stream.h" />
-		<Unit filename="../arduino_core_libs/WCharacter.h" />
-		<Unit filename="../arduino_core_libs/WConstants.h" />
-		<Unit filename="../arduino_core_libs/WProgram.h" />
-		<Unit filename="../arduino_core_libs/WString.h" />
-		<Unit filename="../arduino_core_libs/Wire/Wire.h" />
-		<Unit filename="../arduino_core_libs/binary.h" />
-		<Unit filename="../arduino_core_libs/pins_arduino.h" />
-		<Unit filename="../arduino_core_libs/wiring.h" />
-		<Unit filename="../arduino_core_libs/wiring_private.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />

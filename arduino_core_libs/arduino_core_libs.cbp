@@ -34,6 +34,11 @@
 			<Add option="-mmcu=atmega168p" />
 			<Add option="-fno-exceptions -ffunction-sections -fdata-sections" />
 			<Add option="-DF_CPU=16000000UL" />
+			<Add directory="../arduino_core_libs" />
+			<Add directory="EEPROM" />
+			<Add directory="Ethernet" />
+			<Add directory="SPI" />
+			<Add directory="Wire" />
 		</Compiler>
 		<Linker>
 			<Add option="-Os" />
@@ -44,10 +49,26 @@
 			<Add after="$(build_dir)/make_core.sh $(obj_dir)" />
 			<Mode after="always" />
 		</ExtraCommands>
+		<Unit filename="EEPROM/EEPROM.cpp" />
+		<Unit filename="EEPROM/EEPROM.h" />
+		<Unit filename="Ethernet/Client.cpp" />
+		<Unit filename="Ethernet/Client.h" />
+		<Unit filename="Ethernet/Ethernet.cpp" />
+		<Unit filename="Ethernet/Ethernet.h" />
+		<Unit filename="Ethernet/Server.cpp" />
+		<Unit filename="Ethernet/Server.h" />
+		<Unit filename="Ethernet/Udp.cpp" />
+		<Unit filename="Ethernet/Udp.h" />
+		<Unit filename="Ethernet/utility/socket.cpp" />
+		<Unit filename="Ethernet/utility/socket.h" />
+		<Unit filename="Ethernet/utility/w5100.cpp" />
+		<Unit filename="Ethernet/utility/w5100.h" />
 		<Unit filename="HardwareSerial.cpp" />
 		<Unit filename="HardwareSerial.h" />
 		<Unit filename="Print.cpp" />
 		<Unit filename="Print.h" />
+		<Unit filename="SPI/SPI.cpp" />
+		<Unit filename="SPI/SPI.h" />
 		<Unit filename="Stream.h" />
 		<Unit filename="Tone.cpp" />
 		<Unit filename="WCharacter.h" />

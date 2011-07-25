@@ -1,2 +1,5 @@
 bin/
 obj/
+
+core.a
+*.depend

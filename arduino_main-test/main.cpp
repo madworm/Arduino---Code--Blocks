@@ -1,47 +1,11 @@
-#include "WProgram.h" // don't touch this
+#include "main.h" // don't touch this line
+
+// your 'normal' arduino code goes here
+// but you'll need to do add function prototypes to main.h !
+
 
 #include <stdint.h>
-#include <Wire.h>  // additional includes go here
-
-void setup(void); // don't touch this
-void loop(void); // don't touch this
-int main(void); // don't touch this
-
-
-
-
-/* your function prototypes go here */
-
-
-
-
-/* dont touch this: START */
-extern "C" void __cxa_pure_virtual(void) {
-cli();
-for (;;);
-}
-
-int main(void)
-{
-	init();
-
-	setup();
-
-	for (;;)
-		loop();
-
-	return 0;
-}
-/* don't touch this: END */
-
-
-
-
-/* your 'normal' arduino code goes here */
-/* but you'll need to do function prototypes above ! */
-
-
-
+#include <Wire.h>
 
 // I2C Digital Potentiometer
 // by Nicholas Zambetti <http://www.zambetti.com>
@@ -53,9 +17,6 @@ int main(void)
 // Created 31 March 2006
 
 // This example code is in the public domain.
-
-// This example code is in the public domain.
-
 
 void setup()
 {
@@ -79,4 +40,3 @@ void loop()
   }
   delay(500);
 }
-
