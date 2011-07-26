@@ -36,10 +36,6 @@
 			<Add directory="../arduino_core_libs/Ethernet" />
 			<Add directory="../arduino_core_libs/SPI" />
 		</Compiler>
-		<ResourceCompiler>
-			<Add directory="../arduino_core_libs" />
-			<Add directory="../arduino_core_libs/Wire" />
-		</ResourceCompiler>
 		<Linker>
 			<Add option="-Os" />
 			<Add option="-mmcu=atmega168p" />
@@ -47,8 +43,7 @@
 			<Add option="-Wl,--gc-sections" />
 			<Add library="../arduino_core_libs/core.a" />
 			<Add library="/usr/local/avr/avr/lib/libm.a" />
-			<Add directory="../arduino_core_libs" />
-			<Add directory="../arduino_core_libs/Wire" />
+			<Add library="/usr/local/avr/avr/lib/libc.a" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />

@@ -44,6 +44,8 @@
 			<Add option="-Os" />
 			<Add option="-mmcu=atmega168p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
+			<Add library="/usr/local/avr/avr/lib/libc.a" />
+			<Add library="/usr/local/avr/avr/lib/libm.a" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="$(build_dir)/make_core.sh $(obj_dir)" />
