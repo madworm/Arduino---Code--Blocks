@@ -1,6 +1,5 @@
 #!/bin/bash
 
-LS=`which ls`
 AVR_AR=`which avr-ar`
 
 if [[ -z $1 ]]; then
