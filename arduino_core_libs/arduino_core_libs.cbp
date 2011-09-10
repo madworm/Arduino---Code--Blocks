@@ -41,7 +41,6 @@
 			<Add directory="Wire" />
 		</Compiler>
 		<Linker>
-			<Add option="-Os" />
 			<Add option="-mmcu=atmega168p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
 			<Add library="/usr/local/avr/avr/lib/libc.a" />

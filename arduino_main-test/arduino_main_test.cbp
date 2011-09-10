@@ -37,10 +37,9 @@
 			<Add directory="../arduino_core_libs/SPI" />
 		</Compiler>
 		<Linker>
-			<Add option="-Os" />
 			<Add option="-mmcu=atmega168p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
-			<Add option="-Wl,--gc-sections" />
+			<Add option="-Wl,--gc-sections,--print-gc-sections" />
 			<Add library="../arduino_core_libs/core.a" />
 			<Add library="/usr/local/avr/avr/lib/libm.a" />
 			<Add library="/usr/local/avr/avr/lib/libc.a" />
